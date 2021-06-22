@@ -1,7 +1,15 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { ContainerDiv, SeparatorDiv } from '@/styles/indexStyle'
+import {
+  ContainerDiv,
+  SeparatorDiv,
+  Header,
+  DirectoryDiv,
+  SaveButton,
+  IconButton,
+  AxeDiv,
+} from '@/styles/indexStyle'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
 import { GiCrossedAxes } from 'react-icons/gi'
@@ -17,21 +25,32 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <ContainerDiv>
-          <header>
-            <BsFileEarmarkText />
-            <GoFileDirectory />
+          <Header>
+            <DirectoryDiv className="flex w-1/2 items-center">
+              <IconButton marginRight="1rem">
+                <BsFileEarmarkText />
+              </IconButton>
 
-            <SeparatorDiv />
+              <IconButton>
+                <GoFileDirectory />
+              </IconButton>
 
-            <input type="text" placeholder="Build exotica abuh" />
+              <SeparatorDiv />
 
-            <button>salvar</button>
+              <input type="text" placeholder="Build exotica abuh" />
 
-            <GiCrossedAxes />
+              <SaveButton>salvar</SaveButton>
+            </DirectoryDiv>
 
-            <span>CALCULADORA</span>
-            <span>NEW WORLD BRASIL</span>
-          </header>
+            <AxeDiv className="flex w-1/3 items-center">
+              <GiCrossedAxes size={40} />
+
+              <div className="flex flex-col">
+                <span>CALCULADORA</span>
+                <span>NEW WORLD BRASIL</span>
+              </div>
+            </AxeDiv>
+          </Header>
         </ContainerDiv>
       </main>
     </div>
