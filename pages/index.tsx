@@ -1,17 +1,10 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import styled from 'styled-components'
-
-const ContainerDiv = styled.div`
-  background: rgba(0, 0, 0, 0.75);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  min-width: 500px;
-  min-height: 500px;
-`
+import { ContainerDiv, SeparatorDiv } from '@/styles/indexStyle'
+import { BsFileEarmarkText } from 'react-icons/bs'
+import { GoFileDirectory } from 'react-icons/go'
+import { GiCrossedAxes } from 'react-icons/gi'
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +16,23 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <ContainerDiv>BLA</ContainerDiv>
+        <ContainerDiv>
+          <header>
+            <BsFileEarmarkText />
+            <GoFileDirectory />
+
+            <SeparatorDiv />
+
+            <input type="text" placeholder="Build exotica abuh" />
+
+            <button>salvar</button>
+
+            <GiCrossedAxes />
+
+            <span>CALCULADORA</span>
+            <span>NEW WORLD BRASIL</span>
+          </header>
+        </ContainerDiv>
       </main>
     </div>
   )
