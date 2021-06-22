@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, copy the `.env.example` file and save as `.env`. Inside the .env file, change the DATABASE_URL to the correct Database URI.
+
+Then just run the development server:
 
 ```bash
 npm run dev
