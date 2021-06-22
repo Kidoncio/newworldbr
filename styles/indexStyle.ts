@@ -55,4 +55,8 @@ export const IconButton = styled.button<{ marginRight?: string }>`
   padding: 0.4rem;
   margin-right: ${({ marginRight }) => marginRight};
 `
-export const AxeDiv = styled.div``
+export const AxeDiv = styled.div`
+  svg {
+    margin-right: 1.5rem;
+  }
+`
