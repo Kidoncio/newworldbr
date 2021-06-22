@@ -9,10 +9,10 @@ import {
   SaveButton,
   IconButton,
   AxeDiv,
+  NewWorldLogoSVG,
 } from '@/styles/indexStyle'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
-import { GiCrossedAxes } from 'react-icons/gi'
 
 const Home: NextPage = () => {
   return (
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             </DirectoryDiv>
 
             <AxeDiv className="flex w-1/3 items-center">
-              <GiCrossedAxes size={40} />
+              <NewWorldLogoSVG />
 
               <div className="flex flex-col">
                 <span>CALCULADORA</span>
