@@ -23,6 +23,7 @@ import {
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
 import { NextSeo } from 'next-seo'
+import { Armor } from '../components'
 
 const InputRange = dynamic(() => import('@/components/InputRange'))
 
@@ -130,7 +131,9 @@ const Home: NextPage = () => {
               </div>
             </PointsDiv>
 
-            <ItemsDiv>teste</ItemsDiv>
+            <ItemsDiv>
+              <Armor />
+            </ItemsDiv>
           </div>
         </ContainerDiv>
       </main>

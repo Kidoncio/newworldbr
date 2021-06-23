@@ -36,7 +36,7 @@ export const ContainerDiv = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
-  width: 80rem;
+  width: 100rem;
   height: 55rem;
   color: white;
   padding: 3.2rem 4.8rem;
@@ -142,7 +142,6 @@ export const PointsSpanStr = styled.span`
   font-size: 1.1rem;
   letter-spacing: 0.3rem;
 `
-
 export const ItemsDiv = styled.div`
   width: 45%;
   height: 60%;
