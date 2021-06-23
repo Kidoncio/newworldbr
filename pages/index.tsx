@@ -10,18 +10,20 @@ import {
   IconButton,
   AxeDiv,
   NewWorldLogoSVG,
+  AxeSpan,
+  SeparatorHorizontal,
+  PointsDiv,
+  PointsDivSpan,
+  PointsSpanName,
+  PointsSpanValue,
+  PointsInput,
+  PointsSpanStr,
+  PointsInputSlider,
 } from '@/styles/indexStyle'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
-import { server } from '@/utils/config'
 
 const Home: NextPage = () => {
-  const res = fetch(`${server}/api/hello`)
-
-  res.then((value) => {
-    console.log('value -> ', value.json())
-  })
-
   return (
     <div className={styles.container}>
       <Head>
@@ -49,15 +51,32 @@ const Home: NextPage = () => {
               <SaveButton>salvar</SaveButton>
             </DirectoryDiv>
 
-            <AxeDiv className="flex w-1/3 items-center">
+            <div className="flex w-1/3 items-center">
               <NewWorldLogoSVG />
 
-              <div className="flex flex-col">
-                <span>CALCULADORA</span>
-                <span>NEW WORLD BRASIL</span>
-              </div>
-            </AxeDiv>
+              <AxeDiv className="flex flex-col">
+                <AxeSpan>calculadora</AxeSpan>
+                <span>new world brasil</span>
+              </AxeDiv>
+            </div>
           </Header>
+
+          <SeparatorHorizontal />
+
+          <PointsDiv>
+            <PointsDivSpan>
+              <PointsSpanName>Pontos disponíveis</PointsSpanName>
+              <PointsSpanValue>135</PointsSpanValue>
+            </PointsDivSpan>
+
+            <div className="flex mt-4 items-center">
+              <PointsInput type="text" value="55" />
+              <div className="flex flex-col w-full">
+                <PointsSpanStr>força</PointsSpanStr>
+                <PointsInputSlider type="range" step={50} min={0} max={400} />
+              </div>
+            </div>
+          </PointsDiv>
         </ContainerDiv>
       </main>
     </div>

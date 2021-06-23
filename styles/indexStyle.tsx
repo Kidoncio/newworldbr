@@ -40,9 +40,15 @@ export const ContainerDiv = styled.div`
   height: 55rem;
   color: white;
   padding: 3.2rem 4.8rem;
+  text-transform: uppercase;
+
+  button {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
 `
 export const SeparatorDiv = styled.div`
-  width: 1.5rem;
+  width: 2.5rem;
   content: '';
   height: 1px;
   background-color: red;
@@ -75,8 +81,9 @@ export const SaveButton = styled.button`
   background-color: #fdf063;
   border: 0;
   border-radius: 0.32rem;
-  padding: 0 0.8rem;
+  padding: 0.5rem 1rem;
   margin-left: 0.6rem;
+  color: black;
 `
 
 export const IconButton = styled.button<{ marginRight?: string }>`
@@ -86,7 +93,55 @@ export const IconButton = styled.button<{ marginRight?: string }>`
   margin-right: ${({ marginRight }) => marginRight};
 `
 export const AxeDiv = styled.div`
-  svg {
-    margin-right: 1.5rem;
+  span {
+    font-size: 1.4rem;
   }
+`
+
+export const AxeSpan = styled.span`
+  color: #fdf063;
+  letter-spacing: 0.3rem;
+`
+
+export const SeparatorHorizontal = styled.div`
+  width: 100%;
+  content: '';
+  height: 1px;
+  background-color: red;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+`
+export const PointsDiv = styled.div`
+  width: 55%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+`
+export const PointsDivSpan = styled.div``
+
+export const PointsSpanName = styled.span`
+  font-size: 1rem;
+  margin-right: 0.7rem;
+`
+
+export const PointsSpanValue = styled.span`
+  font-size: 2.2rem;
+  color: #fdf063;
+`
+
+export const PointsInput = styled.input`
+  width: 4.5rem;
+  margin-right: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.4rem;
+`
+export const PointsSpanStr = styled.span`
+  font-size: 1.1rem;
+  letter-spacing: 0.3rem;
+`
+export const PointsInputSlider = styled.input`
+  width: 100%;
+  background-color: #fdf063;
 `
