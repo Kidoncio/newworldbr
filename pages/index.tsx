@@ -13,8 +13,15 @@ import {
 } from '@/styles/indexStyle'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
+import { server } from '@/utils/config'
 
 const Home: NextPage = () => {
+  const res = fetch(`${server}/api/hello`)
+
+  res.then((value) => {
+    console.log('value -> ', value.json())
+  })
+
   return (
     <div className={styles.container}>
       <Head>
