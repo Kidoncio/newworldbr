@@ -1,2 +1,2 @@
-export * from './Armor'
-export * from './InputRange'
+export * from '@/components/Armor'
+export * from '@/components/InputRange'
