@@ -113,12 +113,12 @@ export const SeparatorHorizontal = styled.div`
   margin-bottom: 1.5rem;
 `
 export const PointsDiv = styled.div`
-  width: 55%;
+  width: 50%;
   height: 60%;
   display: flex;
   flex-direction: column;
+  margin-right: 2rem;
 `
-export const PointsDivSpan = styled.div``
 
 export const PointsSpanName = styled.span`
   font-size: 1rem;
@@ -141,4 +141,11 @@ export const PointsInput = styled.input`
 export const PointsSpanStr = styled.span`
   font-size: 1.1rem;
   letter-spacing: 0.3rem;
+`
+
+export const ItemsDiv = styled.div`
+  width: 45%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
 `

@@ -14,11 +14,11 @@ import {
   AxeSpan,
   SeparatorHorizontal,
   PointsDiv,
-  PointsDivSpan,
   PointsSpanName,
   PointsSpanValue,
   PointsInput,
   PointsSpanStr,
+  ItemsDiv,
 } from '@/styles/indexStyle'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
@@ -71,24 +71,67 @@ const Home: NextPage = () => {
           </Header>
 
           <SeparatorHorizontal />
+          <div className="flex w-full justify-between">
+            <PointsDiv>
+              <div>
+                <PointsSpanName>Pontos disponíveis</PointsSpanName>
 
-          <PointsDiv>
-            <PointsDivSpan>
-              <PointsSpanName>Pontos disponíveis</PointsSpanName>
-
-              <PointsSpanValue>135</PointsSpanValue>
-            </PointsDivSpan>
-
-            <div className="flex mt-4 items-center">
-              <PointsInput type="text" defaultValue="55" />
-
-              <div className="flex flex-col w-full">
-                <PointsSpanStr>força</PointsSpanStr>
-
-                <InputRange defaultValue={30} step={50} marks min={0} max={400} />
+                <PointsSpanValue>135</PointsSpanValue>
               </div>
-            </div>
-          </PointsDiv>
+
+              <div className="flex mt-4 items-center">
+                <PointsInput type="text" defaultValue="10" />
+
+                <div className="flex flex-col w-full">
+                  <PointsSpanStr>força</PointsSpanStr>
+
+                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
+                </div>
+              </div>
+
+              <div className="flex mt-4 items-center">
+                <PointsInput type="text" defaultValue="20" />
+
+                <div className="flex flex-col w-full">
+                  <PointsSpanStr>força</PointsSpanStr>
+
+                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
+                </div>
+              </div>
+
+              <div className="flex mt-4 items-center">
+                <PointsInput type="text" defaultValue="30" />
+
+                <div className="flex flex-col w-full">
+                  <PointsSpanStr>força</PointsSpanStr>
+
+                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
+                </div>
+              </div>
+
+              <div className="flex mt-4 items-center">
+                <PointsInput type="text" defaultValue="40" />
+
+                <div className="flex flex-col w-full">
+                  <PointsSpanStr>força</PointsSpanStr>
+
+                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
+                </div>
+              </div>
+
+              <div className="flex mt-4 items-center">
+                <PointsInput type="text" defaultValue="50" />
+
+                <div className="flex flex-col w-full">
+                  <PointsSpanStr>força</PointsSpanStr>
+
+                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
+                </div>
+              </div>
+            </PointsDiv>
+
+            <ItemsDiv>teste</ItemsDiv>
+          </div>
         </ContainerDiv>
       </main>
     </div>
