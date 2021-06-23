@@ -1,4 +1,3 @@
-import { createStyles, makeStyles } from '@material-ui/core'
 import styled from 'styled-components'
 
 interface NewWorldLogoSVGProps {
@@ -142,19 +141,3 @@ export const PointsSpanStr = styled.span`
   font-size: 1.1rem;
   letter-spacing: 0.3rem;
 `
-export const useSliderStyles = makeStyles(() =>
-  createStyles({
-    colorPrimary: {
-      color: 'darkgray',
-    },
-    thumb: {
-      background: '#fdf063',
-    },
-    track: {
-      background: '#fdf063',
-    },
-    rail: {
-      background: 'gray',
-    },
-  })
-)

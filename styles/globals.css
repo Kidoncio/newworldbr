@@ -5,17 +5,22 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: Merriweather, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Merriweather, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: url(https://newworldfans.com/packs/media/images/trapper-e32a9481b25736f04704a78899c00c6e.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-html, body, body>div:first-child, div#__next {
+html,
+body,
+body > div:first-child,
+div#__next {
   height: 100%;
 }
 
@@ -49,4 +54,19 @@ a {
 
 body {
   font-size: 1.6rem;
+}
+
+.MuiSlider-thumbColorPrimary,
+.MuiSlider-markActive,
+.MuiSlider-track {
+  color: #fdf063 !important;
+  background-color: #fdf063 !important;
+}
+
+.MuiSlider-rail {
+  background-color: gray;
+}
+
+.MuiSlider-mark {
+  background-color: darkgray !important;
 }

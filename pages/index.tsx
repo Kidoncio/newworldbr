@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-import { Slider } from '@material-ui/core'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {
@@ -19,14 +18,12 @@ import {
   PointsSpanValue,
   PointsInput,
   PointsSpanStr,
-  useSliderStyles,
 } from '@/styles/indexStyle'
+import { Slider } from '@material-ui/core'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
 
 const Home: NextPage = () => {
-  const sliderClasses = useSliderStyles()
-
   return (
     <div className={styles.container}>
       <Head>
@@ -75,19 +72,12 @@ const Home: NextPage = () => {
             </PointsDivSpan>
 
             <div className="flex mt-4 items-center">
-              <PointsInput type="text" value="55" />
+              <PointsInput type="text" defaultValue="55" />
 
               <div className="flex flex-col w-full">
                 <PointsSpanStr>força</PointsSpanStr>
 
-                <Slider
-                  classes={sliderClasses}
-                  defaultValue={30}
-                  step={50}
-                  marks
-                  min={0}
-                  max={400}
-                />
+                <Slider defaultValue={30} step={50} marks min={0} max={400} />
               </div>
             </div>
           </PointsDiv>
