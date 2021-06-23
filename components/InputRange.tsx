@@ -1,6 +1,6 @@
 import { Slider, withStyles } from '@material-ui/core'
 
-const InputRange = withStyles({
+export const InputRange = withStyles({
   root: {
     color: '#fdf063',
     height: 3,
@@ -20,5 +20,3 @@ const InputRange = withStyles({
     color: '#fdf063 !important',
   },
 })(Slider)
-
-export default InputRange

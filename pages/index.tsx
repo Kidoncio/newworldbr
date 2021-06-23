@@ -1,6 +1,5 @@
 import React from 'react'
 import { NextPage } from 'next'
-import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 import {
   ContainerDiv,
@@ -20,11 +19,10 @@ import {
   PointsInput,
   PointsSpanStr,
 } from '@/styles/indexStyle'
+import { InputRange } from '@/components'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
 import { NextSeo } from 'next-seo'
-
-const InputRange = dynamic(() => import('@/components/InputRange'))
 
 const Home: NextPage = () => {
   return (
