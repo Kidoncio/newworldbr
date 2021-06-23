@@ -18,12 +18,20 @@ import {
   PointsInput,
   PointsSpanStr,
   ItemsDiv,
+  WeaponsDiv,
+  PrimaryWeaponButton,
+  SecondaryWeaponButton,
+  CircularDiv,
+  GemButton,
 } from '@/styles/indexStyle'
-import { InputRange } from '@/components'
+import { InputRange, Armor } from '@/components'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
+import { GiBroadsword } from 'react-icons/gi'
+import { BiPlus } from 'react-icons/bi'
 import { NextSeo } from 'next-seo'
-import { Armor } from '../components'
+import Image from 'next/image'
+import roundshield from '@/public/roundshield.png'
 
 const Home: NextPage = () => {
   return (
@@ -131,6 +139,47 @@ const Home: NextPage = () => {
 
             <ItemsDiv>
               <Armor />
+              <div className="flex flex-col w-full">
+                <span>armas</span>
+                <WeaponsDiv className="flex w-full">
+                  <CircularDiv>
+                    <Image src={roundshield} alt="Circular Shield" />
+                  </CircularDiv>
+
+                  <div className="flex item-center">
+                    <span>1</span>
+
+                    <div>
+                      <PrimaryWeaponButton>
+                        <GiBroadsword size={40} />
+                      </PrimaryWeaponButton>
+
+                      <div className="justify-around">
+                        <span>1365</span>
+                        <GemButton>
+                          <BiPlus size={25} />
+                        </GemButton>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex">
+                    <span>2</span>
+
+                    <div>
+                      <SecondaryWeaponButton>
+                        <BiPlus size={40} />
+                      </SecondaryWeaponButton>
+                      <div>
+                        <span>0</span>
+                        <GemButton>
+                          <BiPlus size={25} />
+                        </GemButton>
+                      </div>
+                    </div>
+                  </div>
+                </WeaponsDiv>
+              </div>
             </ItemsDiv>
           </div>
         </ContainerDiv>

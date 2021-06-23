@@ -124,12 +124,10 @@ export const PointsSpanName = styled.span`
   font-size: 1rem;
   margin-right: 0.7rem;
 `
-
 export const PointsSpanValue = styled.span`
   font-size: 2.2rem;
   color: #fdf063;
 `
-
 export const PointsInput = styled.input`
   width: 4.5rem;
   margin-right: 1rem;
@@ -143,8 +141,55 @@ export const PointsSpanStr = styled.span`
   letter-spacing: 0.3rem;
 `
 export const ItemsDiv = styled.div`
+  span {
+    font-size: 1.4rem;
+  }
   width: 45%;
   height: 60%;
   display: flex;
   flex-direction: column;
+`
+export const WeaponsDiv = styled.div`
+  span {
+    font-size: 1.4rem;
+  }
+  justify-content: space-between;
+`
+export const CircularDiv = styled.div`
+  img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    height: 6rem;
+    width: 6rem;
+    object-fit: fill;
+    border-radius: 50%;
+    border-color: lightgray;
+    background-color: darkgray;
+  }
+  height: 6.3rem;
+  width: 6.3rem;
+  border-radius: 50%;
+  border: 2px solid lightgray;
+`
+
+export const PrimaryWeaponButton = styled.button`
+  height: 5rem;
+  width: 10.5rem;
+`
+
+export const SecondaryWeaponButton = styled.button`
+  height: 5rem;
+  width: 10.5rem;
+`
+
+export const GemButton = styled.button`
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border-color: lightgray;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
