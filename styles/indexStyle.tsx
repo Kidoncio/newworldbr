@@ -91,6 +91,7 @@ export const IconButton = styled.button<{ marginRight?: string }>`
   width: fit-content;
   padding: 0.4rem;
   margin-right: ${({ marginRight }) => marginRight};
+  color: white;
 `
 export const AxeDiv = styled.div`
   span {
