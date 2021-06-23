@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import { Slider } from '@material-ui/core'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {
@@ -18,12 +19,14 @@ import {
   PointsSpanValue,
   PointsInput,
   PointsSpanStr,
-  PointsInputSlider,
+  useSliderStyles,
 } from '@/styles/indexStyle'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
 
 const Home: NextPage = () => {
+  const sliderClasses = useSliderStyles()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -56,6 +59,7 @@ const Home: NextPage = () => {
 
               <AxeDiv className="flex flex-col">
                 <AxeSpan>calculadora</AxeSpan>
+
                 <span>new world brasil</span>
               </AxeDiv>
             </div>
@@ -66,14 +70,24 @@ const Home: NextPage = () => {
           <PointsDiv>
             <PointsDivSpan>
               <PointsSpanName>Pontos disponíveis</PointsSpanName>
+
               <PointsSpanValue>135</PointsSpanValue>
             </PointsDivSpan>
 
             <div className="flex mt-4 items-center">
               <PointsInput type="text" value="55" />
+
               <div className="flex flex-col w-full">
                 <PointsSpanStr>força</PointsSpanStr>
-                <PointsInputSlider type="range" step={50} min={0} max={400} />
+
+                <Slider
+                  classes={sliderClasses}
+                  defaultValue={30}
+                  step={50}
+                  marks
+                  min={0}
+                  max={400}
+                />
               </div>
             </div>
           </PointsDiv>
