@@ -1,18 +1,28 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: ['./components/**/*.tsx', './pages/**/*.tsx'],
-
-  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-})
-
-const cssnano = require('cssnano')({
-  preset: 'default',
-})
-
 module.exports = {
   plugins: [
     'postcss-import',
     'tailwindcss',
     'autoprefixer',
-    ...(process.env.NODE_ENV === 'production' ? [purgecss, cssnano] : []),
+    'postcss-flexbugs-fixes',
+    [
+      'postcss-preset-env',
+      {
+        autoprefixer: {
+          flexbox: 'no-2009',
+        },
+        stage: 3,
+        features: {
+          'custom-properties': false,
+        },
+      },
+    ],
+    [
+      '@fullhuman/postcss-purgecss',
+      {
+        content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+        defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+        safelist: ['html', 'body'],
+      },
+    ],
   ],
 }
