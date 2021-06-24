@@ -50,7 +50,7 @@ export const SeparatorDiv = styled.div`
   width: 2.5rem;
   content: '';
   height: 1px;
-  background-color: red;
+  background-color: #414141;
   transform: rotate(90deg);
 `
 

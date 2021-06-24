@@ -22,7 +22,7 @@ export const SeparatorHorizontal = styled.div`
   width: 100%;
   content: '';
   height: 1px;
-  background-color: red;
+  background-color: #414141;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 `
@@ -106,7 +106,7 @@ export const SeparatorVertical = styled.div`
   width: 10rem;
   content: '';
   height: 1px;
-  background-color: red;
+  background-color: #414141;
   transform: rotate(90deg);
   margin-top: auto;
   margin-bottom: auto;
