@@ -52,7 +52,7 @@ export const Attributes: FC = () => {
         <PointsInput type="text" defaultValue="20" />
 
         <div className="flex flex-col w-full">
-          <PointsSpanStr>força</PointsSpanStr>
+          <PointsSpanStr>destreza</PointsSpanStr>
 
           <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
         </div>
@@ -62,7 +62,7 @@ export const Attributes: FC = () => {
         <PointsInput type="text" defaultValue="30" />
 
         <div className="flex flex-col w-full">
-          <PointsSpanStr>força</PointsSpanStr>
+          <PointsSpanStr>inteligência</PointsSpanStr>
 
           <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
         </div>
@@ -72,7 +72,7 @@ export const Attributes: FC = () => {
         <PointsInput type="text" defaultValue="40" />
 
         <div className="flex flex-col w-full">
-          <PointsSpanStr>força</PointsSpanStr>
+          <PointsSpanStr>foco</PointsSpanStr>
 
           <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
         </div>
@@ -82,7 +82,7 @@ export const Attributes: FC = () => {
         <PointsInput type="text" defaultValue="50" />
 
         <div className="flex flex-col w-full">
-          <PointsSpanStr>força</PointsSpanStr>
+          <PointsSpanStr>constituição</PointsSpanStr>
 
           <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
         </div>
