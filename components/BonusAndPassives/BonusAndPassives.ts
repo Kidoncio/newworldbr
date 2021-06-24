@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const BonusSpan = styled.span`
   text-transform: none;
-  font-size: 0.8rem;
+  font-size: 1.15rem;
   color: #9c9b9b;
 
   span.text-red {
@@ -17,7 +17,7 @@ export const BonusDiv = styled.div`
 
 export const BonusNameSpan = styled.span`
   margin-right: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   color: #9c9b9b;
 `
 
@@ -26,5 +26,6 @@ export const BonusAndPassivesDiv = styled.div`
   flex-direction: column;
   margin-top: 1.3rem;
   width: 45%;
-  overflow-y: auto;
+  height: 12.75rem;
+  overflow: auto;
 `
