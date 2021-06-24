@@ -7,7 +7,7 @@ export const ContainerDiv = styled.div`
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
   width: 100rem;
-  height: 60rem;
+  height: 70rem;
   color: white;
   padding: 3.2rem 4.8rem;
   text-transform: uppercase;
