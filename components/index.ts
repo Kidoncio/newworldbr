@@ -1,2 +1,5 @@
 export * from '@/components/Armor'
-export * from '@/components/InputRange'
+export * from '@/components/Attributes'
+export * from '@/components/BonusAndPassives'
+export * from '@/components/Header'
+export * from '@/components/EssentialElements'

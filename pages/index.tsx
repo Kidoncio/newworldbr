@@ -3,20 +3,7 @@ import { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import {
   ContainerDiv,
-  SeparatorDiv,
-  Header,
-  DirectoryDiv,
-  SaveButton,
-  IconButton,
-  AxeDiv,
-  NewWorldLogoSVG,
-  AxeSpan,
   SeparatorHorizontal,
-  PointsDiv,
-  PointsSpanName,
-  PointsSpanValue,
-  PointsInput,
-  PointsSpanStr,
   ItemsDiv,
   WeaponsDiv,
   WeaponButton,
@@ -24,10 +11,9 @@ import {
   GemDiv,
   WeaponSpan,
   WeaponGemDiv,
+  SeparatorVertical,
 } from '@/styles/indexStyle'
-import { InputRange, Armor } from '@/components'
-import { BsFileEarmarkText } from 'react-icons/bs'
-import { GoFileDirectory } from 'react-icons/go'
+import { Attributes, Armor, Header, BonusAndPassives, EssentialElement } from '@/components'
 import { GiBroadsword, GiCrystalCluster } from 'react-icons/gi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { NextSeo } from 'next-seo'
@@ -51,96 +37,15 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <ContainerDiv>
-          <Header>
-            <DirectoryDiv className="flex w-1/2 items-center">
-              <IconButton marginRight="1rem">
-                <BsFileEarmarkText />
-              </IconButton>
-
-              <IconButton>
-                <GoFileDirectory />
-              </IconButton>
-
-              <SeparatorDiv />
-
-              <input type="text" placeholder="Build exotica abuh" />
-
-              <SaveButton>salvar</SaveButton>
-            </DirectoryDiv>
-
-            <div className="flex w-1/3 items-center">
-              <NewWorldLogoSVG />
-
-              <AxeDiv className="flex flex-col">
-                <AxeSpan>calculadora</AxeSpan>
-
-                <span>new world brasil</span>
-              </AxeDiv>
-            </div>
-          </Header>
+          <Header />
 
           <SeparatorHorizontal />
           <div className="flex w-full justify-between">
-            <PointsDiv>
-              <div>
-                <PointsSpanName>Pontos disponíveis</PointsSpanName>
-
-                <PointsSpanValue>135</PointsSpanValue>
-              </div>
-
-              <div className="flex mt-4 items-center">
-                <PointsInput type="text" defaultValue="10" />
-
-                <div className="flex flex-col w-full">
-                  <PointsSpanStr>força</PointsSpanStr>
-
-                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
-                </div>
-              </div>
-
-              <div className="flex mt-4 items-center">
-                <PointsInput type="text" defaultValue="20" />
-
-                <div className="flex flex-col w-full">
-                  <PointsSpanStr>força</PointsSpanStr>
-
-                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
-                </div>
-              </div>
-
-              <div className="flex mt-4 items-center">
-                <PointsInput type="text" defaultValue="30" />
-
-                <div className="flex flex-col w-full">
-                  <PointsSpanStr>força</PointsSpanStr>
-
-                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
-                </div>
-              </div>
-
-              <div className="flex mt-4 items-center">
-                <PointsInput type="text" defaultValue="40" />
-
-                <div className="flex flex-col w-full">
-                  <PointsSpanStr>força</PointsSpanStr>
-
-                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
-                </div>
-              </div>
-
-              <div className="flex mt-4 items-center">
-                <PointsInput type="text" defaultValue="50" />
-
-                <div className="flex flex-col w-full">
-                  <PointsSpanStr>força</PointsSpanStr>
-
-                  <InputRange defaultValue={30} step={50} marks min={0} max={300} />
-                </div>
-              </div>
-            </PointsDiv>
+            <Attributes />
 
             <ItemsDiv>
               <Armor />
+
               <div className="flex flex-col w-full">
                 <span style={{ marginBottom: '1rem' }}>armas</span>
                 <WeaponsDiv className="flex w-full">
@@ -191,6 +96,16 @@ const Home: NextPage = () => {
                 </WeaponsDiv>
               </div>
             </ItemsDiv>
+          </div>
+
+          <SeparatorHorizontal />
+
+          <div className="flex w-full h-auto">
+            <BonusAndPassives />
+
+            <SeparatorVertical />
+
+            <EssentialElement />
           </div>
         </ContainerDiv>
       </main>
