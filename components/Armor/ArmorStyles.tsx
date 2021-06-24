@@ -5,6 +5,7 @@ export const ArmorDiv = styled.div`
   width: 100%;
   height: auto;
   align-items: center;
+  margin-bottom: 1.2rem;
 `
 export const ButtonItem = styled.button<{
   borderColor: string
@@ -33,11 +34,11 @@ export const ButtonItem = styled.button<{
   height: 6.4rem;
 `
 
-export const ButtonGem = styled.button<{ gemColor: string }>`
+export const ButtonGem = styled.button`
   border-radius: 100%;
   background-color: transparent;
   border-color: #707070;
-  border-width: 0.3rem;
+  border-width: 0.2rem;
   width: 3rem;
   height: 3rem;
   text-align: center;
@@ -45,7 +46,6 @@ export const ButtonGem = styled.button<{ gemColor: string }>`
   justify-content: center;
   display: flex;
   padding: 0.3rem;
-  color: ${({ gemColor }) => gemColor};
 `
 export const ArmorSpanDiv = styled.div`
   margin-bottom: 0.5rem;
