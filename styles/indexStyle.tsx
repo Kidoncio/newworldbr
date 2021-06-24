@@ -153,43 +153,65 @@ export const WeaponsDiv = styled.div`
   span {
     font-size: 1.4rem;
   }
+  -webkit-box-align: center;
   justify-content: space-between;
 `
-export const CircularDiv = styled.div`
+export const ShieldButton = styled.button`
   img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
     object-fit: fill;
     border-radius: 50%;
     border-color: lightgray;
     background-color: darkgray;
   }
-  height: 6.3rem;
-  width: 6.3rem;
+  height: 5.3rem;
+  width: 5.3rem;
   border-radius: 50%;
-  border: 2px solid lightgray;
+  border: 2px solid #5a5a5a;
 `
 
-export const PrimaryWeaponButton = styled.button`
+export const WeaponButton = styled.button<{
+  borderColor: string
+  backgroundColor: string
+  gradientColor: string
+}>`
   height: 5rem;
-  width: 10.5rem;
-`
+  width: 13.5rem;
+  border: 2px solid #ba2edd;
 
-export const SecondaryWeaponButton = styled.button`
-  height: 5rem;
-  width: 10.5rem;
-`
+  background-image: ${({ backgroundColor, gradientColor }) =>
+    `linear-gradient(to top left, ${backgroundColor} 0%, ${gradientColor} 100%)`};
+  background-image: ${({ backgroundColor, gradientColor }) =>
+    `linear-gradient(top left, ${backgroundColor} 0%, ${gradientColor} 100%)`};
 
-export const GemButton = styled.button`
-  height: 3rem;
-  width: 3rem;
-  object-fit: contain;
-  border-radius: 50%;
-  border-color: lightgray;
-  background-color: darkgray;
+  border-color: ${({ borderColor }) => borderColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  margin-bottom: 1.5rem;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+`
+
+export const GemDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+export const WeaponGemDiv = styled.div`
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+`
+
+export const WeaponSpan = styled.span`
+  height: 50%;
+  margin-right: 1rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
 `
