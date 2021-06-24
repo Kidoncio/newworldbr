@@ -19,19 +19,21 @@ import {
   PointsSpanStr,
   ItemsDiv,
   WeaponsDiv,
-  PrimaryWeaponButton,
-  SecondaryWeaponButton,
-  CircularDiv,
-  GemButton,
+  WeaponButton,
+  ShieldButton,
+  GemDiv,
+  WeaponSpan,
+  WeaponGemDiv,
 } from '@/styles/indexStyle'
 import { InputRange, Armor } from '@/components'
 import { BsFileEarmarkText } from 'react-icons/bs'
 import { GoFileDirectory } from 'react-icons/go'
-import { GiBroadsword } from 'react-icons/gi'
-import { BiPlus } from 'react-icons/bi'
+import { GiBroadsword, GiCrystalCluster } from 'react-icons/gi'
+import { AiOutlinePlus } from 'react-icons/ai'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import roundshield from '@/public/roundshield.png'
+import { ButtonGem } from '@/components/Armor/ArmorStyles'
 
 const Home: NextPage = () => {
   return (
@@ -140,44 +142,52 @@ const Home: NextPage = () => {
             <ItemsDiv>
               <Armor />
               <div className="flex flex-col w-full">
-                <span>armas</span>
+                <span style={{ marginBottom: '1rem' }}>armas</span>
                 <WeaponsDiv className="flex w-full">
-                  <CircularDiv>
+                  <ShieldButton>
                     <Image src={roundshield} alt="Circular Shield" />
-                  </CircularDiv>
+                  </ShieldButton>
 
-                  <div className="flex item-center">
-                    <span>1</span>
+                  <WeaponGemDiv>
+                    <WeaponSpan>1</WeaponSpan>
 
                     <div>
-                      <PrimaryWeaponButton>
+                      <WeaponButton
+                        borderColor="#460079"
+                        backgroundColor="#B401DA"
+                        gradientColor="#4A0064"
+                      >
                         <GiBroadsword size={40} />
-                      </PrimaryWeaponButton>
+                      </WeaponButton>
 
-                      <div className="justify-around">
+                      <GemDiv>
                         <span>1365</span>
-                        <GemButton>
-                          <BiPlus size={25} />
-                        </GemButton>
-                      </div>
+                        <ButtonGem>
+                          <GiCrystalCluster size={20} color="#E28E2A" />
+                        </ButtonGem>
+                      </GemDiv>
                     </div>
-                  </div>
+                  </WeaponGemDiv>
 
-                  <div className="flex">
-                    <span>2</span>
+                  <WeaponGemDiv>
+                    <WeaponSpan>2</WeaponSpan>
 
                     <div>
-                      <SecondaryWeaponButton>
-                        <BiPlus size={40} />
-                      </SecondaryWeaponButton>
-                      <div>
+                      <WeaponButton
+                        borderColor="#707070"
+                        backgroundColor="#5E5E5E"
+                        gradientColor="#414141"
+                      >
+                        <AiOutlinePlus size={25} color="#9c9b9b" />
+                      </WeaponButton>
+                      <GemDiv>
                         <span>0</span>
-                        <GemButton>
-                          <BiPlus size={25} />
-                        </GemButton>
-                      </div>
+                        <ButtonGem>
+                          <AiOutlinePlus size={15} color="#9c9b9b" />
+                        </ButtonGem>
+                      </GemDiv>
                     </div>
-                  </div>
+                  </WeaponGemDiv>
                 </WeaponsDiv>
               </div>
             </ItemsDiv>
