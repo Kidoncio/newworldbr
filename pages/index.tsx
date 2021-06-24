@@ -13,7 +13,14 @@ import {
   WeaponGemDiv,
   SeparatorVertical,
 } from '@/styles/indexStyle'
-import { Attributes, Armor, Header, BonusAndPassives, EssentialElement } from '@/components'
+import {
+  Attributes,
+  Armor,
+  Header,
+  BonusAndPassives,
+  EssentialElement,
+  Accessories,
+} from '@/components'
 import { GiBroadsword, GiCrystalCluster } from 'react-icons/gi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { NextSeo } from 'next-seo'
@@ -95,6 +102,9 @@ const Home: NextPage = () => {
                   </WeaponGemDiv>
                 </WeaponsDiv>
               </div>
+
+              <SeparatorHorizontal />
+              <Accessories />
             </ItemsDiv>
           </div>
 
