@@ -21,8 +21,8 @@ export const Armor: FC = () => {
             <GiCrestedHelmet size={45} />
           </ButtonItem>
 
-          <ButtonGem gemColor="#00CC00">
-            <GiFireGem size={20} />
+          <ButtonGem>
+            <GiFireGem size={20} color="#00CC00" />
           </ButtonGem>
         </div>
 
@@ -31,8 +31,8 @@ export const Armor: FC = () => {
             <GiShoulderArmor size={45} />
           </ButtonItem>
 
-          <ButtonGem gemColor="#9c9b9b">
-            <AiOutlinePlus size={15} />
+          <ButtonGem>
+            <AiOutlinePlus size={15} color="#9c9b9b" />
           </ButtonGem>
         </div>
 
@@ -41,8 +41,8 @@ export const Armor: FC = () => {
             <GiLeatherBoot size={45} />
           </ButtonItem>
 
-          <ButtonGem gemColor="#9c9b9b">
-            <AiOutlinePlus size={15} />
+          <ButtonGem>
+            <AiOutlinePlus size={15} color="#9c9b9b" />
           </ButtonGem>
         </div>
 
@@ -51,18 +51,18 @@ export const Armor: FC = () => {
             <GiGloves size={45} />
           </ButtonItem>
 
-          <ButtonGem gemColor="#9c9b9b">
-            <AiOutlinePlus size={15} />
+          <ButtonGem>
+            <AiOutlinePlus size={15} color="#9c9b9b" />
           </ButtonGem>
         </div>
 
         <div className="flex flex-col items-center justify-center">
           <ButtonItem borderColor="#707070" backgroundColor="#5E5E5E" gradientColor="#414141">
-            <AiOutlinePlus size={25} />
+            <AiOutlinePlus size={25} color="#9c9b9b" />
           </ButtonItem>
 
-          <ButtonGem gemColor="#9c9b9b">
-            <AiOutlinePlus size={15} />
+          <ButtonGem>
+            <AiOutlinePlus size={15} color="#9c9b9b" />
           </ButtonGem>
         </div>
       </ArmorDiv>
