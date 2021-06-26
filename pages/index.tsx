@@ -38,6 +38,7 @@ const Home: NextPage = () => {
           <Header />
 
           <SeparatorHorizontal />
+
           <div className="flex w-full justify-between">
             <IndexAttributesDiv>
               <Attributes />
@@ -49,6 +50,7 @@ const Home: NextPage = () => {
               <Weapons />
 
               <SeparatorHorizontal />
+
               <Accessories />
             </ItemsDiv>
           </div>

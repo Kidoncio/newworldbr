@@ -48,8 +48,10 @@ export const ShieldButton = styled.button`
     background-color: darkgray;
   }
   margin-top: 1rem;
+
   height: 5.3rem;
   width: 5.3rem;
+
   border-radius: 50%;
   border: 2px solid #5a5a5a;
 `

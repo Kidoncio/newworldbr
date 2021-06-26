@@ -9,7 +9,7 @@ import {
   GearValueSpan,
   AttributesDiv,
   ElementsDiv,
-} from './EssentialElements'
+} from './EssentialElementsStyles'
 
 import { SeparatorVertical } from '../../styles/indexStyle'
 
@@ -21,7 +21,9 @@ export const EssentialElement: FC = () => {
       <div className="flex w-full">
         <GearDiv className="flex flex-col mr-4 items-center text-center">
           <GearNameSpan>gear score</GearNameSpan>
+
           <GearSeparator />
+
           <GearValueSpan>237</GearValueSpan>
         </GearDiv>
 
@@ -69,16 +71,19 @@ export const EssentialElement: FC = () => {
           <div className="flex flex-col w-full">
             <ElementsDiv className="flex justify-between">
               <span className="element-spacing">Saúde</span>
+
               <span>3245</span>
             </ElementsDiv>
 
             <ElementsDiv className="flex justify-between">
               <span className="element-spacing">Regeneração de Mana</span>
+
               <span>100%</span>
             </ElementsDiv>
 
             <ElementsDiv className="flex justify-between">
               <span className="element-spacing">Redução de Tempo de Recarga</span>
+
               <span>0%</span>
             </ElementsDiv>
           </div>

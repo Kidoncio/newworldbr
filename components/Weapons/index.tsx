@@ -21,6 +21,7 @@ export const Weapons: FC = () => {
   return (
     <div className="flex flex-col w-full">
       <WeaponsLabel>armas</WeaponsLabel>
+
       <WeaponsDiv className="flex w-full">
         <ShieldButton>
           <Image src={roundShield} alt="Circular Shield" />
@@ -36,6 +37,7 @@ export const Weapons: FC = () => {
 
             <GemDiv>
               <span>1365</span>
+
               <ButtonGem>
                 <GiCrystalCluster size={20} color="#E28E2A" />
               </ButtonGem>
@@ -50,8 +52,10 @@ export const Weapons: FC = () => {
             <WeaponButton borderColor="#707070" backgroundColor="#5E5E5E" gradientColor="#414141">
               <AiOutlinePlus size={25} color="#9c9b9b" />
             </WeaponButton>
+
             <GemDiv>
               <span>0</span>
+
               <ButtonGem>
                 <AiOutlinePlus size={15} color="#9c9b9b" />
               </ButtonGem>

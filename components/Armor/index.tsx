@@ -15,6 +15,7 @@ export const Armor: FC = () => {
       <ArmorSpanDiv className="flex w-full items-center">
         <span>Armadura</span>
       </ArmorSpanDiv>
+
       <ArmorDiv className="justify-between">
         <div className="flex flex-col items-center justify-center">
           <ButtonItem borderColor="#00CC00" backgroundColor="#C0F14E" gradientColor="#008E00">
