@@ -10,6 +10,7 @@ import {
   AxeSpan,
   SeparatorDiv,
   HeaderDiv,
+  InputHeader,
 } from './HeaderStyles'
 
 export const Header: FC = () => {
@@ -17,21 +18,21 @@ export const Header: FC = () => {
     <HeaderDiv>
       <DirectoryDiv className="flex w-1/2 items-center">
         <IconButton marginRight="1rem">
-          <BsFileEarmarkText />
+          <BsFileEarmarkText size={15} />
         </IconButton>
 
         <IconButton>
-          <GoFileDirectory />
+          <GoFileDirectory size={15} />
         </IconButton>
 
         <SeparatorDiv />
 
-        <input type="text" placeholder="Build exotica abuh" />
+        <InputHeader type="text" placeholder="Build exotica abuh" />
 
         <SaveButton>salvar</SaveButton>
       </DirectoryDiv>
 
-      <div className="flex w-1/3 items-center">
+      <div className="flex w-1/3 items-center div-logo-justify-end">
         <NewWorldLogoSVG />
 
         <AxeDiv className="flex flex-col">

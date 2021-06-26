@@ -34,6 +34,6 @@ export const ButtonItem = styled.button<{
   justify-content: center;
 
   padding: 0.5rem;
-  width: 5.4rem;
-  height: 5.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
 `

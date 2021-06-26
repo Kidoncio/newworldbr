@@ -31,26 +31,24 @@ export const NewWorldLogoSVG = ({
 
 export const HeaderDiv = styled.header`
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
 
-  svg {
-    width: auto;
-  }
+  width: 100%;
 
-  input {
-    width: 40%;
-    margin-right: 0.8rem;
-    background-color: transparent;
+  .div-logo-justify-end {
+    justify-content: flex-end;
   }
 `
 
 export const SeparatorDiv = styled.div`
   width: 2.5rem;
-  content: '';
   height: 1px;
+
+  content: '';
+
   background-color: #414141;
+
   transform: rotate(90deg);
 `
 
@@ -62,19 +60,23 @@ export const DirectoryDiv = styled.div`
 
 export const SaveButton = styled.button`
   background-color: #fdf063;
+  color: black;
+
   border: 0;
   border-radius: 0.32rem;
+
   padding: 0.5rem 1rem;
   margin-left: 0.6rem;
-  color: black;
 `
 
 export const IconButton = styled.button<{ marginRight?: string }>`
-  background-color: black;
-  width: fit-content;
-  padding: 0.4rem;
-  margin-right: ${({ marginRight }) => marginRight};
+  background-color: #2d2b2bb8;
   color: white;
+
+  width: fit-content;
+
+  padding: 0.5rem;
+  margin-right: ${({ marginRight }) => marginRight};
 `
 
 export const AxeDiv = styled.div`
@@ -86,4 +88,19 @@ export const AxeDiv = styled.div`
 export const AxeSpan = styled.span`
   color: #fdf063;
   letter-spacing: 0.3rem;
+`
+
+export const InputHeader = styled.input`
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+
+  background-color: #2d2b2bb8;
+
+  width: 40%;
+
+  padding: 0.5rem 1rem;
+  margin-right: 0.8rem;
+
+  border: 0;
+  border-radius: 0.32rem;
 `

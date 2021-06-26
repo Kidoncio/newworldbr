@@ -36,78 +36,20 @@ export const ItemsDiv = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const WeaponsDiv = styled.div`
-  span {
-    font-size: 1.4rem;
-  }
-  -webkit-box-align: center;
-  justify-content: space-between;
-`
-export const ShieldButton = styled.button`
-  img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    height: 5rem;
-    width: 5rem;
-    object-fit: fill;
-    border-radius: 50%;
-    border-color: lightgray;
-    background-color: darkgray;
-  }
-  height: 5.3rem;
-  width: 5.3rem;
-  border-radius: 50%;
-  border: 2px solid #5a5a5a;
-`
 
-export const WeaponButton = styled.button<{
-  borderColor: string
-  backgroundColor: string
-  gradientColor: string
-}>`
-  height: 5rem;
-  width: 13.5rem;
-  border: 2px solid #ba2edd;
-
-  background-image: ${({ backgroundColor, gradientColor }) =>
-    `linear-gradient(to top left, ${backgroundColor} 0%, ${gradientColor} 100%)`};
-  background-image: ${({ backgroundColor, gradientColor }) =>
-    `linear-gradient(top left, ${backgroundColor} 0%, ${gradientColor} 100%)`};
-
-  border-color: ${({ borderColor }) => borderColor};
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  margin-bottom: 1.5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-export const GemDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-export const WeaponGemDiv = styled.div`
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  text-align: center;
-`
-
-export const WeaponSpan = styled.span`
-  height: 50%;
-  margin-right: 1rem;
-  text-align: center;
-  align-items: center;
-  display: flex;
-`
-export const SeparatorVertical = styled.div`
-  width: 10rem;
+export const SeparatorVertical = styled.div<{ width?: string }>`
+  width: ${({ width }) => width || '10rem'};
   content: '';
   height: 1px;
   background-color: #414141;
   transform: rotate(90deg);
   margin-top: auto;
   margin-bottom: auto;
+`
+
+export const IndexAttributesDiv = styled.div`
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
 `
