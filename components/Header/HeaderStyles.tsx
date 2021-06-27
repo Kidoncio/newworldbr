@@ -58,7 +58,7 @@ export const DirectoryDiv = styled.div`
   }
 `
 
-export const SaveButton = styled.button`
+export const SaveButton = styled.button<{ active?: boolean }>`
   background-color: #fdf063;
   color: black;
 
@@ -67,6 +67,8 @@ export const SaveButton = styled.button`
 
   padding: 0.5rem 1rem;
   margin-left: 0.6rem;
+
+  text-transform: uppercase;
 `
 
 export const IconButton = styled.button<{ marginRight?: string }>`

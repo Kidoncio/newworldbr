@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { RiArrowRightSLine } from 'react-icons/ri'
-import { BonusSpan, BonusDiv, BonusNameSpan, BonusAndPassivesDiv } from './BonusAndPassives'
+import { BonusSpan, BonusDiv, BonusNameSpan, BonusAndPassivesDiv } from './BonusAndPassivesStyles'
 import { Strong } from '../EssentialElements/EssentialElementsStyles'
 
 export const BonusAndPassives: FC = () => {

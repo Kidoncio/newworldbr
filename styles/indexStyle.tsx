@@ -25,8 +25,8 @@ export const ContainerDiv = styled.div`
   }
 `
 
-export const SeparatorHorizontal = styled.div`
-  width: 100%;
+export const SeparatorHorizontal = styled.div<{ width?: string }>`
+  width: ${({ width }) => width || '100%'};
   height: 1px;
 
   content: '';

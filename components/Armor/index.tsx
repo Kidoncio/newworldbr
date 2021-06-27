@@ -7,7 +7,8 @@ import {
   GiFireGem,
 } from 'react-icons/gi'
 import { AiOutlinePlus } from 'react-icons/ai'
-import { ButtonItem, ArmorDiv, ButtonGem, ArmorSpanDiv } from './ArmorStyles'
+import { ButtonItem, ArmorDiv, ArmorSpanDiv } from './ArmorStyles'
+import { ArmorGemModal } from './ArmorGemModal'
 
 export const Armor: FC = () => {
   return (
@@ -22,9 +23,9 @@ export const Armor: FC = () => {
             <GiCrestedHelmet size={45} />
           </ButtonItem>
 
-          <ButtonGem>
+          <ArmorGemModal>
             <GiFireGem size={20} color="#00CC00" />
-          </ButtonGem>
+          </ArmorGemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -32,9 +33,9 @@ export const Armor: FC = () => {
             <GiShoulderArmor size={45} />
           </ButtonItem>
 
-          <ButtonGem>
+          <ArmorGemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ButtonGem>
+          </ArmorGemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -42,9 +43,9 @@ export const Armor: FC = () => {
             <GiLeatherBoot size={45} />
           </ButtonItem>
 
-          <ButtonGem>
+          <ArmorGemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ButtonGem>
+          </ArmorGemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -52,9 +53,9 @@ export const Armor: FC = () => {
             <GiGloves size={45} />
           </ButtonItem>
 
-          <ButtonGem>
+          <ArmorGemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ButtonGem>
+          </ArmorGemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -62,9 +63,9 @@ export const Armor: FC = () => {
             <AiOutlinePlus size={25} color="#9c9b9b" />
           </ButtonItem>
 
-          <ButtonGem>
+          <ArmorGemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ButtonGem>
+          </ArmorGemModal>
         </div>
       </ArmorDiv>
     </ArmorDiv>
