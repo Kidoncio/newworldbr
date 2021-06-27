@@ -28,3 +28,89 @@ model User {
   posts         Post[]
   @@map(name: "users")
 }
+
+model Item {
+    id                          Int       @default(autoincrement()) @id
+    name                        String
+    description                 String?
+    type                        ItemType
+    tier                        ItemTier?
+    weight                      Float
+    durability                  Int?
+    baseGearScore               Int?
+    salvageable                 Boolean
+    repairable                  Boolean
+    isTraded                    Boolean
+    bindOnPickup                Boolean
+    primaryUse                  ItemUse?
+    equipType                   String?
+    damageStatMultiplier        ItemDamageStatMultiplier?
+    gatheringTypes              ItemGatheringTypes?
+    gatheringMultiplier         Float?
+    gatheringEfficiency         Float?
+    primaryHand                 ItemHand?
+    baseDamage                  Int?
+    critDamageMultiplier        Float?
+    baseStaggerDamager          Int?
+    critStaggerDamageMultiplier Float?
+    requiredStrength            Int?
+    requiredDexteriry           Int?
+    requiredIntelligence        Int?
+    requiredSpirit              Int?
+    scalingStrength             Float?
+    scalingDexteriry            Int?
+    scalingIntelligence         Float?
+    scalingSpirit               Int?
+    createdAt                   DateTime  @default(now()) @map(name: "created_at")
+    updatedAt                   DateTime  @updatedAt @map(name: "updated_at")
+    deletedAt                   DateTime?
+}
+
+enum ItemType {
+  ammo
+  armor
+  consumable
+  dye
+  gem
+  furniture
+  resource
+  weapon
+}
+
+enum ItemTier {
+  tier0
+  tier1
+  tier2
+  tier3
+  tier4
+  tier5
+}
+
+enum ItemClass {
+  legs
+  consumable
+}
+
+enum ItemRarity {
+  common
+  uncommon
+  rare
+  epic
+  legendary
+}
+
+enum ItemUse {
+  combatMelee
+}
+
+enum ItemDamageStatMultiplier {
+  oneHandSwordDamage
+}
+
+enum ItemGatheringTypes {
+  none
+}
+
+enum ItemHand {
+  main
+}
