@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Image from 'next/image'
-import { ButtonGem } from '@/components/Armor/ArmorStyles'
+import { GemModal } from './../GemModal/index'
 
 import roundShield from '@/public/roundshield.png'
 
@@ -38,9 +38,9 @@ export const Weapons: FC = () => {
             <GemDiv>
               <span>1365</span>
 
-              <ButtonGem>
+              <GemModal>
                 <GiCrystalCluster size={20} color="#E28E2A" />
-              </ButtonGem>
+              </GemModal>
             </GemDiv>
           </div>
         </WeaponGemDiv>
@@ -56,9 +56,9 @@ export const Weapons: FC = () => {
             <GemDiv>
               <span>0</span>
 
-              <ButtonGem>
+              <GemModal>
                 <AiOutlinePlus size={15} color="#9c9b9b" />
-              </ButtonGem>
+              </GemModal>
             </GemDiv>
           </div>
         </WeaponGemDiv>

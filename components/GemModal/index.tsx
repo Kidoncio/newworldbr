@@ -1,16 +1,16 @@
 import { FC, useState } from 'react'
 import { DialogTitle, DialogContent, DialogActions } from '@material-ui/core'
-import { ButtonModalGem, StyledDialog, CancelButton } from './ArmorStyles'
+import { ButtonModalGem, StyledDialog, CancelButton, ButtonGem } from './GemModalStyles'
 import { SeparatorHorizontal } from '../../styles/indexStyle'
 import { InputHeader, SaveButton } from '../Header/HeaderStyles'
 import { GiFireGem } from 'react-icons/gi'
 
-export const ArmorGemModal: FC = ({ children }) => {
+export const GemModal: FC = ({ children }) => {
   const [open, setOpen] = useState<boolean>(false)
 
   return (
     <>
-      <ButtonModalGem onClick={() => setOpen(true)}>{children}</ButtonModalGem>
+      <ButtonGem onClick={() => setOpen(true)}>{children}</ButtonGem>
 
       <StyledDialog
         open={open}
@@ -18,7 +18,7 @@ export const ArmorGemModal: FC = ({ children }) => {
         aria-describedby="alert-dialog-description"
         maxWidth="md"
       >
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle id="gem-title">
           <span>ACOPLAR GEMA</span>
         </DialogTitle>
 
@@ -31,10 +31,10 @@ export const ArmorGemModal: FC = ({ children }) => {
             <InputHeader type="text" placeholder="Buscar por nome" />
 
             <div className="flex">
-              <SaveButton active={true}>tier 1</SaveButton>
               <SaveButton>tier 2</SaveButton>
-              <SaveButton>tier 3</SaveButton>
-              <SaveButton>tier 4</SaveButton>
+              <SaveButton className="not-active">tier 3</SaveButton>
+              <SaveButton className="not-active">tier 4</SaveButton>
+              <SaveButton className="not-active">tier 5</SaveButton>
             </div>
           </div>
 

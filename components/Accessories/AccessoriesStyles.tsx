@@ -29,7 +29,7 @@ export const ButtonItem = styled.button<{
 
   border-color: ${({ borderColor }) => borderColor};
   background-color: ${({ backgroundColor }) => backgroundColor};
-  color: white;
+  color: #d8d8d8;
 
   display: flex;
   align-items: center;

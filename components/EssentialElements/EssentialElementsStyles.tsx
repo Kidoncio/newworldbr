@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const EssentialElementsDiv = styled.div`
   width: 45%;
+  height: 15.75rem;
 
   margin-top: 1.3rem;
 `
@@ -66,7 +67,7 @@ export const AttributesDiv = styled.div`
     color: red;
   }
   .dex {
-    color: #fdf063;
+    color: #be993e;
   }
   .int {
     color: #67eff7;

@@ -32,7 +32,7 @@ export const BonusAndPassivesDiv = styled.div`
   margin-top: 1.3rem;
 
   width: 45%;
-  height: 12.75rem;
+  height: 15.75rem;
 
   .div-overflow {
     overflow: auto;

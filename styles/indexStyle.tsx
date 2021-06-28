@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ContainerDiv = styled.div`
   background: rgba(0, 0, 0, 0.75);
 
-  color: white;
+  color: #d8d8d8;
 
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
@@ -13,7 +13,7 @@ export const ContainerDiv = styled.div`
   border-radius: 10px;
 
   width: 100rem;
-  height: 70rem;
+  height: 75rem;
 
   padding: 3.2rem 4.8rem;
 

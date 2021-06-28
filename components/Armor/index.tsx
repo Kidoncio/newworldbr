@@ -8,7 +8,7 @@ import {
 } from 'react-icons/gi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { ButtonItem, ArmorDiv, ArmorSpanDiv } from './ArmorStyles'
-import { ArmorGemModal } from './ArmorGemModal'
+import { GemModal } from '../GemModal'
 
 export const Armor: FC = () => {
   return (
@@ -23,9 +23,9 @@ export const Armor: FC = () => {
             <GiCrestedHelmet size={45} />
           </ButtonItem>
 
-          <ArmorGemModal>
+          <GemModal>
             <GiFireGem size={20} color="#00CC00" />
-          </ArmorGemModal>
+          </GemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -33,9 +33,9 @@ export const Armor: FC = () => {
             <GiShoulderArmor size={45} />
           </ButtonItem>
 
-          <ArmorGemModal>
+          <GemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ArmorGemModal>
+          </GemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -43,9 +43,9 @@ export const Armor: FC = () => {
             <GiLeatherBoot size={45} />
           </ButtonItem>
 
-          <ArmorGemModal>
+          <GemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ArmorGemModal>
+          </GemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -53,9 +53,9 @@ export const Armor: FC = () => {
             <GiGloves size={45} />
           </ButtonItem>
 
-          <ArmorGemModal>
+          <GemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ArmorGemModal>
+          </GemModal>
         </div>
 
         <div className="flex flex-col items-center justify-center">
@@ -63,9 +63,9 @@ export const Armor: FC = () => {
             <AiOutlinePlus size={25} color="#9c9b9b" />
           </ButtonItem>
 
-          <ArmorGemModal>
+          <GemModal>
             <AiOutlinePlus size={15} color="#9c9b9b" />
-          </ArmorGemModal>
+          </GemModal>
         </div>
       </ArmorDiv>
     </ArmorDiv>

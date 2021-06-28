@@ -58,9 +58,11 @@ export const DirectoryDiv = styled.div`
   }
 `
 
-export const SaveButton = styled.button<{ active?: boolean }>`
-  background-color: #fdf063;
+export const SaveButton = styled.button`
+  background-color: #be993e;
   color: black;
+
+  letter-spacing: 0.1rem;
 
   border: 0;
   border-radius: 0.32rem;
@@ -69,11 +71,16 @@ export const SaveButton = styled.button<{ active?: boolean }>`
   margin-left: 0.6rem;
 
   text-transform: uppercase;
+
+  &.not-active {
+    background-color: #2d2b2bb8;
+    color: #6b6a6ab8;
+  }
 `
 
 export const IconButton = styled.button<{ marginRight?: string }>`
   background-color: #2d2b2bb8;
-  color: white;
+  color: #d8d8d8;
 
   width: fit-content;
 
@@ -82,14 +89,16 @@ export const IconButton = styled.button<{ marginRight?: string }>`
 `
 
 export const AxeDiv = styled.div`
-  span {
-    font-size: 1.4rem;
+  :nth-child(2) {
+    font-size: 1.17rem;
+    letter-spacing: 0.1rem;
   }
 `
 
 export const AxeSpan = styled.span`
-  color: #fdf063;
+  color: #be993e;
   letter-spacing: 0.3rem;
+  font-size: 1.4rem;
 `
 
 export const InputHeader = styled.input`

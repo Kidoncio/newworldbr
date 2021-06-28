@@ -10,7 +10,7 @@ import {
 
 const InputSlider = withStyles({
   root: {
-    color: '#fdf063',
+    color: '#be993e',
     height: 3,
   },
   rail: {
@@ -21,11 +21,11 @@ const InputSlider = withStyles({
     backgroundColor: 'darkgray',
   },
   markActive: {
-    backgroundColor: '#dbd055',
+    backgroundColor: '#be993e',
   },
   thumb: {
-    backgroundColor: '#fdf063 !important',
-    color: '#fdf063 !important',
+    backgroundColor: '#be993e !important',
+    color: '#be993e !important',
   },
 })(Slider)
 

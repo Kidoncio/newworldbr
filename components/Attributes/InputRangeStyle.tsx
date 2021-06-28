@@ -19,7 +19,7 @@ export const PointsSpanName = styled.span`
 export const PointsSpanValue = styled.span`
   font-size: 2.4rem;
 
-  color: #fdf063;
+  color: #be993e;
 `
 export const PointsInput = styled.input`
   width: 4.5rem;
