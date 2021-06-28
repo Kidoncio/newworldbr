@@ -11,21 +11,30 @@ import {
 const InputSlider = withStyles({
   root: {
     color: '#be993e',
-    height: 3,
+    height: 5,
+    alignItems: 'center',
+    display: 'flex',
   },
   rail: {
     color: 'gray',
-    backgroundColor: 'gray',
+    backgroundColor: '#333333',
+    height: '0.3rem',
   },
   mark: {
-    backgroundColor: 'darkgray',
+    backgroundColor: '#000',
+    width: '0.8rem',
+    height: '0.8rem',
+    borderRadius: '100%',
+    border: '2px solid #333333',
   },
   markActive: {
     backgroundColor: '#be993e',
+    border: 'none',
   },
   thumb: {
     backgroundColor: '#be993e !important',
     color: '#be993e !important',
+    margin: '0',
   },
 })(Slider)
 
