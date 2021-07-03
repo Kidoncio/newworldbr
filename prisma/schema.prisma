@@ -11,7 +11,7 @@ generator client {
 }
 
 model Post {
-  id        Int     @default(autoincrement()) @id
+  id        Int     @id @default(autoincrement())
   title     String
   content   String?
   published Boolean @default(false)
@@ -20,97 +20,155 @@ model Post {
 }
 
 model User {
-  id            Int       @default(autoincrement()) @id
-  name          String?
-  email         String?   @unique
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
+  id        Int      @id @default(autoincrement())
+  name      String?
+  email     String?  @unique
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @updatedAt @map(name: "updated_at")
+  posts     Post[]
+  builds    Build[]
+
   @@map(name: "users")
 }
 
+model Set {
+  id                           Int       @id @default(autoincrement())
+  name                         String
+  physicalArmorSetScaleFactor  Float?
+  elementalArmorSetScaleFactor Float?
+  items                        Item[]
+  createdAt                    DateTime  @default(now()) @map(name: "created_at")
+  updatedAt                    DateTime? @updatedAt @map(name: "updated_at")
+  deletedAt                    DateTime?
+}
+
 model Item {
-    id                          Int       @default(autoincrement()) @id
-    name                        String
-    description                 String?
-    type                        ItemType
-    tier                        ItemTier?
-    weight                      Float
-    durability                  Int?
-    baseGearScore               Int?
-    salvageable                 Boolean
-    repairable                  Boolean
-    isTraded                    Boolean
-    bindOnPickup                Boolean
-    primaryUse                  ItemUse?
-    equipType                   String?
-    damageStatMultiplier        ItemDamageStatMultiplier?
-    gatheringTypes              ItemGatheringTypes?
-    gatheringMultiplier         Float?
-    gatheringEfficiency         Float?
-    primaryHand                 ItemHand?
-    baseDamage                  Int?
-    critDamageMultiplier        Float?
-    baseStaggerDamager          Int?
-    critStaggerDamageMultiplier Float?
-    requiredStrength            Int?
-    requiredDexteriry           Int?
-    requiredIntelligence        Int?
-    requiredSpirit              Int?
-    scalingStrength             Float?
-    scalingDexteriry            Int?
-    scalingIntelligence         Float?
-    scalingSpirit               Int?
-    createdAt                   DateTime  @default(now()) @map(name: "created_at")
-    updatedAt                   DateTime  @updatedAt @map(name: "updated_at")
-    deletedAt                   DateTime?
+  id                          Int       @id @default(autoincrement())
+  name                        String
+  description                 String?
+  slot                        String    @default("resource")
+  type                        String    @default("resource")
+  gearScoreMin                Int?
+  gearScoreMax                Int?
+  tier                        Int?
+  rarity                      String?
+  weight                      Float     @default(0.01)
+  durability                  Int?
+  baseGearScore               Int?
+  physicalArmorRatingMin      Int?
+  physicalArmorRatingMax      Int?
+  elementalArmorRatingMin     Int?
+  elementalArmorRatingMax     Int?
+  ArmorRatingScaleFactor      Float?
+  salvageable                 Boolean   @default(false)
+  repairable                  Boolean   @default(false)
+  isTraded                    Boolean   @default(false)
+  bindOnPickup                Boolean   @default(false)
+  isGem                       Boolean   @default(false)
+  perks                       Perk[]
+  levelRequired               Int?
+  primaryUse                  String?
+  equipType                   String?
+  damageStatMultiplier        String?
+  gatheringTypes              String?
+  gatheringMultiplier         Float?
+  gatheringEfficiency         Float?
+  primaryHand                 String?
+  baseDamage                  Int?
+  critDamageMultiplier        Float?
+  baseStaggerDamager          Int?
+  critStaggerDamageMultiplier Float?
+  ammoType                    String?
+  requiredStrength            Int?
+  requiredDexteriry           Int?
+  requiredIntelligence        Int?
+  requiredFocus               Int?
+  scalingStrength             Float?
+  scalingDexteriry            Float?
+  scalingIntelligence         Float?
+  scalingFocus                Float?
+  set                         Set?      @relation(fields: [setId], references: [id])
+  setId                       Int?
+  primaryWeapon               Build[]   @relation(name: "primaryWeaponItem")
+  primaryWeaponGems           Build[]   @relation(name: "primaryWeaponGemItem")
+  secondaryWeapon             Build[]   @relation(name: "secondaryWeaponItem")
+  secondaryWeaponGems         Build[]   @relation(name: "secondaryWeaponGemItem")
+  shield                      Build[]   @relation(name: "shieldItem")
+  shieldGems                  Build[]   @relation(name: "shieldGemsItem")
+  head                        Build[]   @relation(name: "headItem")
+  headGems                    Build[]   @relation(name: "headGemsItem")
+  chest                       Build[]   @relation(name: "chestItem")
+  chestGems                   Build[]   @relation(name: "chestGemsItem")
+  hand                        Build[]   @relation(name: "handItem")
+  handGems                    Build[]   @relation(name: "handGemsItem")
+  leg                         Build[]   @relation(name: "legItem")
+  legGems                     Build[]   @relation(name: "legGemsItem")
+  feet                        Build[]   @relation(name: "feetItem")
+  feetGems                    Build[]   @relation(name: "feetGemsItem")
+  amulet                      Build[]   @relation(name: "amuletItem")
+  earing                      Build[]   @relation(name: "earingItem")
+  ring                        Build[]   @relation(name: "ringItem")
+  bag                         Build[]   @relation(name: "bagItem")
+  createdAt                   DateTime  @default(now()) @map(name: "created_at")
+  updatedAt                   DateTime? @updatedAt @map(name: "updated_at")
+  deletedAt                   DateTime?
 }
 
-enum ItemType {
-  ammo
-  armor
-  consumable
-  dye
-  gem
-  furniture
-  resource
-  weapon
+model Perk {
+  id                   Int       @id @default(autoincrement())
+  name                 String
+  description          String
+  bonus                String[]
+  availableOnItemClass String[]
+  affix                String
+  itemsUsing           Item[]
+  createdAt            DateTime  @default(now()) @map(name: "created_at")
+  updatedAt            DateTime? @updatedAt @map(name: "updated_at")
+  deletedAt            DateTime?
 }
 
-enum ItemTier {
-  tier0
-  tier1
-  tier2
-  tier3
-  tier4
-  tier5
-}
-
-enum ItemClass {
-  legs
-  consumable
-}
-
-enum ItemRarity {
-  common
-  uncommon
-  rare
-  epic
-  legendary
-}
-
-enum ItemUse {
-  combatMelee
-}
-
-enum ItemDamageStatMultiplier {
-  oneHandSwordDamage
-}
-
-enum ItemGatheringTypes {
-  none
-}
-
-enum ItemHand {
-  main
+model Build {
+  id                  Int       @id @default(autoincrement())
+  strength            Int       @default(5)
+  dexterity           Int       @default(5)
+  intelligence        Int       @default(5)
+  focus               Int       @default(5)
+  constitution        Int       @default(5)
+  primaryWeapon       Item?     @relation(references: [id], fields: [primaryWeaponId], name: "primaryWeaponItem")
+  primaryWeaponId     Int?
+  primaryWeaponGems   Item[]    @relation(references: [id], name: "primaryWeaponGemItem")
+  secondaryWeapon     Item?     @relation(references: [id], fields: [secondaryWeaponid], name: "secondaryWeaponItem")
+  secondaryWeaponid   Int?
+  secondaryWeaponGems Item[]    @relation(references: [id], name: "secondaryWeaponGemItem")
+  shield              Item?     @relation(references: [id], fields: [shieldId], name: "shieldItem")
+  shieldId            Int?
+  shieldGems          Item[]    @relation(references: [id], name: "shieldGemsItem")
+  head                Item?     @relation(references: [id], fields: [headId], name: "headItem")
+  headId              Int?
+  headGems            Item[]    @relation(references: [id], name: "headGemsItem")
+  chest               Item?     @relation(references: [id], fields: [chestId], name: "chestItem")
+  chestId             Int?
+  chestGems           Item[]    @relation(references: [id], name: "chestGemsItem")
+  hand                Item?     @relation(references: [id], fields: [handId], name: "handItem")
+  handId              Int?
+  handGems            Item[]    @relation(references: [id], name: "handGemsItem")
+  leg                 Item?     @relation(references: [id], fields: [legId], name: "legItem")
+  legId               Int?
+  legGems             Item[]    @relation(references: [id], name: "legGemsItem")
+  feet                Item?     @relation(references: [id], fields: [feetId], name: "feetItem")
+  feetId              Int?
+  feetGems            Item[]    @relation(references: [id], name: "feetGemsItem")
+  amulet              Item?     @relation(references: [id], fields: [amuletId], name: "amuletItem")
+  amuletId            Int?
+  earing              Item?     @relation(references: [id], fields: [earingId], name: "earingItem")
+  earingId            Int?
+  ring                Item?     @relation(references: [id], fields: [ringId], name: "ringItem")
+  ringId              Int?
+  bag                 Item?     @relation(references: [id], fields: [bagId], name: "bagItem")
+  bagId               Int?
+  user                User?     @relation(references: [id], fields: [userId])
+  userId              Int?
+  createdAt           DateTime  @default(now()) @map(name: "created_at")
+  updatedAt           DateTime? @updatedAt @map(name: "updated_at")
+  deletedAt           DateTime?
 }
