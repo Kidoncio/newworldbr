@@ -1,99 +1,197 @@
-import { FC } from 'react'
-import { Slider, withStyles } from '@material-ui/core'
+import { FC, useState } from 'react'
 import {
   PointsDiv,
   PointsSpanName,
   PointsSpanValue,
   PointsInput,
   PointsSpanStr,
+  InputSlider,
 } from './InputRangeStyle'
-
-const InputSlider = withStyles({
-  root: {
-    color: '#be993e',
-    height: 5,
-    alignItems: 'center',
-    display: 'flex',
-  },
-  rail: {
-    color: 'gray',
-    backgroundColor: '#333333',
-    height: '0.3rem',
-  },
-  mark: {
-    backgroundColor: '#000',
-    width: '0.8rem',
-    height: '0.8rem',
-    borderRadius: '100%',
-    border: '2px solid #333333',
-  },
-  markActive: {
-    backgroundColor: '#be993e',
-    border: 'none',
-  },
-  thumb: {
-    backgroundColor: '#be993e !important',
-    color: '#be993e !important',
-    margin: '0',
-  },
-})(Slider)
+import { useEffect } from 'react'
 
 export const Attributes: FC = () => {
+  const [valueStr, setValueStr] = useState<number>(5)
+  const [valueDex, setValueDex] = useState<number>(5)
+  const [valueInt, setValueInt] = useState<number>(5)
+  const [valueFoc, setValueFoc] = useState<number>(5)
+  const [valueCon, setValueCon] = useState<number>(5)
+  const [availablePoints, setAvailablePoints] = useState<number>(190)
+
+  useEffect(() => {
+    setAvailablePoints(190 - valueStr - valueDex - valueInt - valueFoc - valueCon)
+  }, [availablePoints, valueCon, valueDex, valueFoc, valueInt, valueStr])
+
   return (
     <PointsDiv>
       <div>
         <PointsSpanName>Pontos disponíveis</PointsSpanName>
 
-        <PointsSpanValue>135</PointsSpanValue>
+        <PointsSpanValue>{availablePoints}</PointsSpanValue>
       </div>
 
       <div className="flex mt-4 items-center">
-        <PointsInput type="text" defaultValue="10" />
+        <PointsInput
+          type="text"
+          value={valueStr}
+          onChange={(event: any) => {
+            const valueRegexNumber = event.target.value.replace(/[^.0-9]+/gm, '')
+            const valueParseToNumber = Number(valueRegexNumber)
+
+            if (valueParseToNumber < 5) {
+              setValueStr(5)
+            } else if (valueParseToNumber > 300) {
+              setValueStr(300)
+            } else {
+              setValueStr(valueParseToNumber)
+            }
+          }}
+        />
 
         <div className="flex flex-col w-full">
           <PointsSpanStr>força</PointsSpanStr>
 
-          <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
+          <InputSlider
+            value={valueStr}
+            onChange={(_event, value: number) => {
+              const valueAvailable = availablePoints - value
+
+              if (valueAvailable < 0) return
+
+              setValueStr(value)
+            }}
+            step={50}
+            marks
+            min={5}
+            max={300}
+          />
         </div>
       </div>
 
       <div className="flex mt-4 items-center">
-        <PointsInput type="text" defaultValue="20" />
+        <PointsInput
+          type="text"
+          value={valueDex}
+          onChange={(event: any) => {
+            const valueRegexNumber = event.target.value.replace(/[^.0-9]+/gm, '')
+            const valueParseToNumber = Number(valueRegexNumber)
+
+            if (valueParseToNumber < 5) {
+              setValueDex(5)
+            } else if (valueParseToNumber > 300) {
+              setValueDex(300)
+            } else {
+              setValueDex(valueParseToNumber)
+            }
+          }}
+        />
 
         <div className="flex flex-col w-full">
           <PointsSpanStr>destreza</PointsSpanStr>
 
-          <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
+          <InputSlider
+            value={valueDex}
+            onChange={(_event, value: number) => setValueDex(value)}
+            step={50}
+            marks
+            min={5}
+            max={300}
+          />
         </div>
       </div>
 
       <div className="flex mt-4 items-center">
-        <PointsInput type="text" defaultValue="30" />
+        <PointsInput
+          type="text"
+          value={valueInt}
+          onChange={(event: any) => {
+            const valueRegexNumber = event.target.value.replace(/[^.0-9]+/gm, '')
+            const valueParseToNumber = Number(valueRegexNumber)
+
+            if (valueParseToNumber < 5) {
+              setValueInt(5)
+            } else if (valueParseToNumber > 300) {
+              setValueInt(300)
+            } else {
+              setValueInt(valueParseToNumber)
+            }
+          }}
+        />
 
         <div className="flex flex-col w-full">
           <PointsSpanStr>inteligência</PointsSpanStr>
 
-          <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
+          <InputSlider
+            value={valueInt}
+            onChange={(_event, value: number) => setValueInt(value)}
+            step={50}
+            marks
+            min={5}
+            max={300}
+          />
         </div>
       </div>
 
       <div className="flex mt-4 items-center">
-        <PointsInput type="text" defaultValue="40" />
+        <PointsInput
+          type="text"
+          value={valueFoc}
+          onChange={(event: any) => {
+            const valueRegexNumber = event.target.value.replace(/[^.0-9]+/gm, '')
+            const valueParseToNumber = Number(valueRegexNumber)
+
+            if (valueParseToNumber < 5) {
+              setValueFoc(5)
+            } else if (valueParseToNumber > 300) {
+              setValueFoc(300)
+            } else {
+              setValueFoc(valueParseToNumber)
+            }
+          }}
+        />
 
         <div className="flex flex-col w-full">
           <PointsSpanStr>foco</PointsSpanStr>
 
-          <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
+          <InputSlider
+            value={valueFoc}
+            onChange={(_event, value: number) => setValueFoc(value)}
+            step={50}
+            marks
+            min={5}
+            max={300}
+          />
         </div>
       </div>
 
       <div className="flex mt-4 items-center">
-        <PointsInput type="text" defaultValue="50" />
+        <PointsInput
+          type="text"
+          value={valueCon}
+          onChange={(event: any) => {
+            const valueRegexNumber = event.target.value.replace(/[^.0-9]+/gm, '')
+            const valueParseToNumber = Number(valueRegexNumber)
+
+            if (valueParseToNumber < 5) {
+              setValueCon(5)
+            } else if (valueParseToNumber > 300) {
+              setValueCon(300)
+            } else {
+              setValueCon(valueParseToNumber)
+            }
+          }}
+        />
 
         <div className="flex flex-col w-full">
           <PointsSpanStr>constituição</PointsSpanStr>
 
-          <InputSlider defaultValue={30} step={50} marks min={0} max={300} />
+          <InputSlider
+            value={valueCon}
+            onChange={(_event, value: number) => setValueCon(value)}
+            step={50}
+            marks
+            min={5}
+            max={300}
+          />
         </div>
       </div>
     </PointsDiv>
